@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+            
+            <title>Sherpaio </title>
+            
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+                <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
+                <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+                <script type="text/javascript">
+                    $(document).bind('mobileinit', function() {
+                                     $.mobile.page.prototype.options.addBackBtn = true;
+                                     });
+                    </script>
+                <script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+                <script type="text/javascript" src="scripts/chat.js"></script>
+                <script type="text/javascript" src="scripts/model.js"></script>
+                <script type="text/javascript" src="scripts/ui.js"></script>
+                <script type="text/javascript" src="phonegap-1.0.0.js"></script>
+                <script type="text/javascript" src="scripts.js"></script>
+                    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    </head>
+    
+    <body>
+        <!-- Amazaon Script -->
+        
+        <script type="text/javascript">
+            
+            window.onAmazonLoginReady = function() {
+                amazon.Login.setClientId('amzn1.application-oa2-client.c74e8f038397418eadcdfe36933bcd29');
+            };
+            (function(d) {
+             var a = d.createElement('script'); a.type = 'text/javascript';
+             a.async = true; a.id = 'amazon-login-sdk';
+             a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+             d.getElementById('amazon-root').appendChild(a);
+             })(document);
+            
+            </script>
+        
+        <div data-role="page" id="home" data-theme="c">
+            
+            <div id="branding">
+                <div data-role="header" data-position="fixed">
+                    <h1>Amazon Now </h1>
+                </div>
+            </div>
+            <div data-role="content">
+                <div class="amazon-button">
+                    <a href="#" id="LoginWithAmazon">
+                        <img border="0" alt="Login with Amazon"
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+                        width="156" height="32" />
+                    </a>
+                    
+                    
+                    <script type="text/javascript">
+                        
+                        document.getElementById('LoginWithAmazon').onclick = function() {
+                            options = { scope : 'profile' };
+                            amazon.Login.authorize(options, 'https://www.sherpaio.com/handle_login.php');
+                            return false;
+                        };
+                        
+                        </script>
+                    
+                </div>
+                
+                <h1> What are you looking to buy? </h1>
+                
+                <div class="choice_list">
+                    <ul data-role="listview" data-inset="true" data-filter="true">
+                        
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="sushis.jpg"/><h3>Appliance</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="pizza.jpg"/><h3>Automotive</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="burrito.jpg"/><h3>Baby</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="doner.jpg"/><h3>Beauty</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="chickenw.jpg"/><h3>Books</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="ribs.jpg"/><h3>Clothes</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="sushis.jpg"/><h3>Computer</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="pizza.jpg"/><h3>Jewelry</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="burrito.jpg"/><h3>Sports</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="doner.jpg"/><h3>Travel</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="chickenw.jpg"/><h3>Home</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <img src="ribs.jpg"/><h3>Electronics</h3></a></li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                
+            </div><!-- /page -->
+            
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="arrow-l"></a></li>
+                        <li><a href="#" data-icon="back"></a></li>
+                        <li><a href="#home" data-icon="home"></a></li>
+                        <li><a href="#" data-icon="plus"></a></li>
+                        <li><a href="#" data-icon="arrow-r"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="choose_category" data-role="page" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1> Brand </h1>
+            </div>
+            <div data-role="content">
+                <div class="category_list">
+                    <h1> Which product brand are you looking for? </h1>
+                    <ul data-role="listview" data-inset="true" data-filter="true">
+                        <li><a href="#choose_products" data-transition="slide"> Asics <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide"> Cartier <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Ebel <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Corum <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Longines <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Tag Heuer <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Tissot <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Wenger <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Victronix <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" >  Hamilton <span class="ui-li-count">4</span></a></li>
+                    </ul>
+                </div>
+                
+            </div><!-- /page-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="choose_category.HTML" data-icon="arrow-l"></a></li>
+                        <li><a href="#choose_category" data-icon="back"></a></li>
+                        <li><a href="#home" data-icon="home"></a></li>
+                        <li><a href="#products" data-icon="plus"></a></li>
+                        <li><a href="#product" data-icon="arrow-r"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="choose_products" data-role="page" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1> Model</h1>
+            </div>
+            <div data-role="content">
+                <div class="product_list">
+                    <h1>Please choose a model</h1>
+                    <ul data-role="listview" data-inset="true" data-filter="true">
+                        <li><a href="#product" data-transition="slidedown"> <h2>Bulova</h2> <p> 4 stars</p></a>
+                        </li>
+                        <li><a href="#product" data-transition="slide"> Cartier Diamond Womens <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <h2>Corum Navigator</h2> <p5 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> Ebel Womens <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide">IWC <p> 5 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> Longines Womens Automatic <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> Tag Heuer Automatic Chronograph <p> 5 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> Tissot T-Touch <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> Wenger Chronograph <p> 3 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> Victronix <p> 2 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide">  Hamilton Aviator<p> 4 stars</p></a></li>
+                </div>
+            </div><!-- /page -->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="choose_category.HTML" data-icon="arrow-l"></a></li>
+                        <li><a href="products.HTML" data-icon="back"></a></li>
+                        <li><a href="sherpaio.HTML" data-icon="home"></a></li>
+                        <li><a href="#" data-icon="plus"></a></li>
+                        <li><a href="choose_product.HTML" data-icon="arrow-r"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="product" data-role="page" data-title="product" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed">
+                <h1>Description & Reviews </h1>
+                    </div>
+                    <div id="content" data-role="content">
+                    <ul data-role="listview" data-inset="true" data-theme="d">
+                    <li data-role="list-divider">
+                    <h1> Corum Mens Nautical</h1>
+                    <p><strong> Swiss Quartz Movement with tachometer and compass</strong></p>
+                    <p> Details:</p>
+                    </li>
+                    <li> Price: $3450 </li>
+                    <li> Size: 43mm	</li>
+                    <li> Make: Switzerland </li>
+                    <li> Band: Titanium </li>
+                    <li> Bezel: Sapphire Scratch proof </li>
+                    <li> Features: Automatic </li>
+                    <li>
+                    <a href=""><img src="../../../corum.jpg" class="io-li-icon"></a>
+                    </li>
+                    
+                    </ul>
+                    </div>
+                    
+                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
+                    <h2> 4.5 stars </h2>
+                    
+                    <li>
+                    <h2> Review:</h2>
+                    <p>Beautiful watch that is a one of a kind timepiece</p>
+                    <h4> Reviewer: </h4>
+                    <p> Lucky Lindy </p>
+                    <h4> Status: </h4>
+                    <p> Online </p>
+                    <a href="#chats" data-role="button" data-icon="grid" data-iconpos="left" data-transition="pop" >Chat</a>
+                    </li>
+                    
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
+                    <h2> 5 stars </h2>
+                    
+                    <li>
+                    <h2> Review:</h2>
+                    <p>Magnificent design and innovation in a watch.</p>
+                    <h4> Reviewer: </h4>
+                    <p> Master Chef </p>
+                    <h4> Status: </h4>
+                    <p> Online </p>
+                    <a href="#chats" data-role="button" data-transition="pop" data-icon="" >Chat</a>
+                    
+                    </li>
+                    
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
+                    <h2> 2 stars </h2>
+                    
+                    <li>
+                    <h2> Review:</h2>
+                    <p>I expected better quality from Crotum and for this price</p>
+                    <h4> Reviewer: </h4>
+                    <p> Cornell Jacks </p>
+                    <h4> Status: <p> Online </p></h4>
+                    <a href="#chats" data-role="button" data-icon="" data-transition="pop" >Chat</a>								
+                    </li>
+                    
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
+                    <h2> 2.5 stars </h2>
+                    
+                    <li>
+                    <h2> Review:</h2>
+                    <p>Small band for a an average man. Im
+                    6.5'
+                    and my wrists measure 14" I weigh 180</p>
+                    <h4> Reviewer: </h4>
+                    <p> Jesper Dumas</p>
+                    <h4> Status: </h4>
+                    <p> Offline </p>
+                    <a href="#chats" data-role="button" data-icon="" data-transition="pop">Chat</a>
+                    
+                    </li>
+                    </div>
+                    <!-- /grid-a -->
+                    <div id="review">
+                    <form>
+                    <label for="select-choice-0" class="select"><h2> User rating </h2></label>
+                    <select name="note_utilisateur" id="note_utilisateur" data-native-menu="false" data-theme="c" >
+                    <option value="one" class="one"> Not good at all </option>
+                    <option value="two" class="two">Average </option>
+                    <option value="three" class="three">Pretty good </option>
+                    <option value="four" class="four"> Excellent </option>
+                    </select>
+                    </form>
+                    </div>
+                    
+                    <!-- /page -->
+                    <div data-role="footer" data-position="fixed">
+                    <div data-role="navbar">
+                    <ul>
+                    <li><a href="#choose_category" data-icon="arrow-l"></a></li>
+                    <li><a href="#choose_products" data-icon="back"></a></li>
+                    <li><a href="#super" data-icon="home"></a></li>
+                    <li><a href="#chat" data-icon="plus"></a></li>
+                    <li><a href="choose_product.HTML" data-icon="arrow-r"></a></li>
+                    </ul>
+                    </div>
+                    </div>
+                    </div>
+                    <div id="chats" data-role="page" data-title="chat" data-add-back-btn="true">
+                    <div id="chat_script">
+                    <script>
+                    $('#chats').live('pageinit', funciton(event) {
+                    $('#chat1').send(function() {
+                    var len = $('#comment').val().length();
+                    if ( len < 1 || len >100) {
+                        $('errmsg').text('Invalid comment length. Length must be greater than 1 but less than 100 characters').show().fadeout(5000);
+                        return false;
+                        }
+                        else
+                        return true;
+                        });
+                        });
+                        </script>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <h1> Start Chat</h1>
+            </div>
+            <div data-role="content">
+                <div>
+                    <h2> Reviewer: </h2>
+                    <p> Luckylindy </p>
+                    <form action="" id="chat1" method="post" data-transition="pop" data-direction="reverse"/>
+                    
+					<div data-role="fieldcontain">
+                        <fieldset>
+                            <label for="message"> Message: </label>
+                            <input type="text" id="comment" placeholder="This is awesome"  data-mini="true" name="comment"/>
+                            <div id='errmsg' style='color: #f00'></div>
+			 				<input type="button" id='send' value="Send"/>
+                            </div>
+                    </fieldset>
+                </div>
+			    
+                </form>
+                
+	   			
+                <div>
+                    <h2> User: </h2>
+                    <p> mikedog42 </p>
+                    
+                    <form action="" id="chat2" method="post" data-transition="pop" data-direction="reverse"/>
+                    <div data-role="fieldcontain">
+                        <fieldset>
+                            <label for="message"> Message: </label>
+                            <input type="text" id="comment2" placeholder="This is awesome"  data-mini="true" name="comment"/>
+                            <input type="button" id='send' value="Send"/>
+                        </fieldset>
+                    </div>
+                    
+                    </form>
+                    
+                </div>
+                
+                <form>
+	             	<label for="next">What's Next</label>
+                    <select name="options" id="opt" data-native-menu="false" >
+                        <option value="one" class="one"> Continue Shopping </option>
+                        <option value="two" class="two"> Read More Review </option>
+                        <option value="three" class="three"> Buy Now </option>
+                    </select>
+                    
+                </form>
+                
+                
+            </div>
+        </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="choose_category.HTML" data-icon="arrow-l"></a></li>
+                    <li><a href="products.HTML" data-icon="back"></a></li>
+                    <li><a href="sherpaio.HTML" data-icon="home"></a></li>
+                    <li><a href="#" data-icon="plus"></a></li>
+                    <li><a href="choose_product.HTML" data-icon="arrow-r"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>
