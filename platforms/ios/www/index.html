@@ -43,6 +43,71 @@
     </head>
     
     <body>
+        <div id="base" data-role="page">
+            <div data-role="header">
+                <h1> Reviewsy.io</h1>
+                <a href=""></a>
+            </div>
+            <div data-role="content" data-theme="c">
+                <div id="login">
+                    <form action="result.js" id="login" method="post" data-transition="pop" data-direction="reverse"/>
+                    <label for="username">username</label>
+                    <input type="text" value="" placeholder="username">
+                        <label for="password">password</label>
+                        <input type="text" value="" placeholder="password">
+                            <a href="#home" data-role="button" data-theme="a">Sign In</a>
+                            </form>
+                            <div class="amazon-button">
+                                <a href="#" id="LoginWithAmazon">
+                                    <img border="0" alt="Login with Amazon"
+                                    src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+                                    width="156" height="32" />
+                                </a>
+                                
+                                
+                                <script type="text/javascript">
+                                    
+                                    document.getElementById('LoginWithAmazon').onclick = function() {
+                                        options = { scope : 'profile' };
+                                        amazon.Login.authorize(options, 'https://www.sherpaio.com/handle_login.php');
+                                        return false;
+                                    };
+                                    
+                                    </script>
+                                
+                            </div>
+                            
+                            </div>
+                
+                <!-- Amazaon Script -->
+                
+                <script type="text/javascript">
+                    
+                    window.onAmazonLoginReady = function() {
+                        amazon.Login.setClientId('amzn1.application-oa2-client.c74e8f038397418eadcdfe36933bcd29');
+                    };
+                    (function(d) {
+                     var a = d.createElement('script'); a.type = 'text/javascript';
+                     a.async = true; a.id = 'amazon-login-sdk';
+                     a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+                     d.getElementById('amazon-root').appendChild(a);
+                     })(document);
+                    
+                    </script>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#choose_category" data-icon="arrow-l"></a></li>
+                        <li><a href="#products" data-icon="back"></a></li>
+                        <li><a href="#home" data-icon="home"></a></li>
+                        <li><a href="#chat" data-icon="plus"></a></li>
+                        <li><a href="#choose_products" data-icon="arrow-r"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- Amazaon Script -->
         
         <script type="text/javascript">
@@ -59,51 +124,31 @@
             
             </script>
         
-        <div data-role="page" id="home" data-theme="c">
-            
+        <div data-role="page" id="home" data-theme="c" data-add-back-btn="true">
             <div id="branding">
                 <div data-role="header" data-position="fixed">
                     <h1>Amazon Now </h1>
                 </div>
             </div>
             <div data-role="content">
-                <div class="amazon-button">
-                    <a href="#" id="LoginWithAmazon">
-                        <img border="0" alt="Login with Amazon"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
-                        width="156" height="32" />
-                    </a>
-                    
-                    
-                    <script type="text/javascript">
-                        
-                        document.getElementById('LoginWithAmazon').onclick = function() {
-                            options = { scope : 'profile' };
-                            amazon.Login.authorize(options, 'https://www.sherpaio.com/handle_login.php');
-                            return false;
-                        };
-                        
-                        </script>
-                    
-                </div>
                 
                 <h1> What are you looking to buy? </h1>
                 
                 <div class="choice_list">
                     <ul data-role="listview" data-inset="true" data-filter="true">
                         
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="sushis.jpg"/><h3>Appliance</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="pizza.jpg"/><h3>Automotive</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="burrito.jpg"/><h3>Baby</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="doner.jpg"/><h3>Beauty</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="chickenw.jpg"/><h3>Books</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="ribs.jpg"/><h3>Clothes</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="sushis.jpg"/><h3>Computer</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="pizza.jpg"/><h3>Jewelry</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="burrito.jpg"/><h3>Sports</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="doner.jpg"/><h3>Travel</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="chickenw.jpg"/><h3>Home</h3></a></li>
-                        <li><a href="#choose_category" data-transition="slidedown"> <img src="ribs.jpg"/><h3>Electronics</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Appliance</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Automotive</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Baby</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"><h3>Beauty</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Books</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Clothes</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Computer</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"><h3>Jewelry</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Sports</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Travel</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"> <h3>Home</h3></a></li>
+                        <li><a href="#choose_category" data-transition="slidedown"><h3>Electronics</h3></a></li>
                         
                     </ul>
                     
@@ -115,11 +160,12 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" data-icon="arrow-l"></a></li>
-                        <li><a href="#" data-icon="back"></a></li>
+                        <li><a href="#choose_category" data-icon="arrow-l"></a></li>
+                        <li><a href="#products" data-icon="back"></a></li>
                         <li><a href="#home" data-icon="home"></a></li>
-                        <li><a href="#" data-icon="plus"></a></li>
-                        <li><a href="#" data-icon="arrow-r"></a></li>
+                        <li><a href="#chat" data-icon="plus"></a></li>
+                        <li><a href="#choose_products" data-icon="arrow-r"></a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -133,16 +179,16 @@
                 <div class="category_list">
                     <h1> Which product brand are you looking for? </h1>
                     <ul data-role="listview" data-inset="true" data-filter="true">
-                        <li><a href="#choose_products" data-transition="slide"> Asics <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide"> Cartier <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Ebel <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Corum <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Longines <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Tag Heuer <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Tissot <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Wenger <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" > Victronix <span class="ui-li-count">4</span></a></li>
-                        <li><a href="#choose_products" data-transition="slide" >  Hamilton <span class="ui-li-count">4</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide"> Asics <span class="ui-li-count">6</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide"> Cartier <span class="ui-li-count">11</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Ebel <span class="ui-li-count">13</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Corum <span class="ui-li-count">18</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Longines <span class="ui-li-count">3</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Tag Heuer <span class="ui-li-count">5</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Tissot <span class="ui-li-count">12</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Wenger <span class="ui-li-count">11</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" > Victronix <span class="ui-li-count">9</span></a></li>
+                        <li><a href="#choose_products" data-transition="slide" >  Hamilton <span class="ui-li-count">8</span></a></li>
                     </ul>
                 </div>
                 
@@ -150,11 +196,11 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="choose_category.HTML" data-icon="arrow-l"></a></li>
-                        <li><a href="#choose_category" data-icon="back"></a></li>
+                        <li><a href="#choose_category" data-icon="arrow-l"></a></li>
+                        <li><a href="#products" data-icon="back"></a></li>
                         <li><a href="#home" data-icon="home"></a></li>
-                        <li><a href="#products" data-icon="plus"></a></li>
-                        <li><a href="#product" data-icon="arrow-r"></a></li>
+                        <li><a href="#chat" data-icon="plus"></a></li>
+                        <li><a href="#choose_products" data-icon="arrow-r"></a></li>
                     </ul>
                 </div>
             </div>
@@ -167,28 +213,29 @@
                 <div class="product_list">
                     <h1>Please choose a model</h1>
                     <ul data-role="listview" data-inset="true" data-filter="true">
-                        <li><a href="#product" data-transition="slidedown"> <h2>Bulova</h2> <p> 4 stars</p></a>
+                        <li><a href="#product" data-transition="slidedown"> <img src="/img/bulova.jpg"/><h2>Bulova</h2>  <p> 4 stars</p></a>
                         </li>
-                        <li><a href="#product" data-transition="slide"> Cartier Diamond Womens <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> <h2>Corum Navigator</h2> <p5 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> Ebel Womens <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide">IWC <p> 5 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> Longines Womens Automatic <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> Tag Heuer Automatic Chronograph <p> 5 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> Tissot T-Touch <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> Wenger Chronograph <p> 3 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> Victronix <p> 2 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide">  Hamilton Aviator<p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide">  <img src="/jquerytuts/img/cartier.jpg"/> Cartier Diamond Womens <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/corum.jpg"/> <h2>Corum Navigator</h2> <p5 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/ebel.jpg"/> Ebel Womens <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/iwc.jpg"/> IWC <p> 5 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/longines.jpg"/> Longines Womens Automatic <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/tagheuer.jpg"/>Tag Heuer Automatic Chronograph <p> 5 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/tissot.jpg"/> Tissot T-Touch <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/wenger.jpg"/> Wenger Chronograph <p> 3 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/uboat.jpg"/>U-Boat <p> 2 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/hamilton.jpg"/> Hamilton Aviator<p> 4 stars</p></a></li>
                 </div>
             </div><!-- /page -->
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="choose_category.HTML" data-icon="arrow-l"></a></li>
-                        <li><a href="products.HTML" data-icon="back"></a></li>
-                        <li><a href="sherpaio.HTML" data-icon="home"></a></li>
-                        <li><a href="#" data-icon="plus"></a></li>
-                        <li><a href="choose_product.HTML" data-icon="arrow-r"></a></li>
+                        <li><a href="#choose_category" data-icon="arrow-l"></a></li>
+                        <li><a href="#products" data-icon="back"></a></li>
+                        <li><a href="#home" data-icon="home"></a></li>
+                        <li><a href="#chat" data-icon="plus"></a></li>
+                        <li><a href="#choose_products" data-icon="arrow-r"></a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -211,13 +258,27 @@
                     <li> Bezel: Sapphire Scratch proof </li>
                     <li> Features: Automatic </li>
                     <li>
-                    <a href=""><img src="../../../corum.jpg" class="io-li-icon"></a>
+                    <a href=""><img src="../img/corum.jpg" ></a>
                     </li>
                     
                     </ul>
                     </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content="b">
+                    <h2> 5 stars </h2>
                     
-                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
+                    <li>
+                    <h2> Review:</h2>
+                    <p>Magnificent design and innovation in a watch.</p>
+                    <h4> Reviewer: </h4>
+                    <p> Master Chef </p>
+                    <h4> Status: </h4>
+                    <p> Online </p>
+                    <a href="#chats" data-role="button" data-transition="pop" data-icon="grid" >Chat</a>
+                    
+                    </li>
+                    
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content="b">
                     <h2> 4.5 stars </h2>
                     
                     <li>
@@ -231,8 +292,8 @@
                     </li>
                     
                     </div>
-                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
-                    <h2> 5 stars </h2>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content="b">
+                    <h2> 3 stars </h2>
                     
                     <li>
                     <h2> Review:</h2>
@@ -241,13 +302,13 @@
                     <p> Master Chef </p>
                     <h4> Status: </h4>
                     <p> Online </p>
-                    <a href="#chats" data-role="button" data-transition="pop" data-icon="" >Chat</a>
+                    <a href="#chats" data-role="button" data-transition="pop" data-icon="grid" >Chat</a>
                     
                     </li>
                     
                     </div>
-                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
-                    <h2> 2 stars </h2>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content="b">
+                    <h2> 2.5 stars </h2>
                     
                     <li>
                     <h2> Review:</h2>
@@ -255,12 +316,12 @@
                     <h4> Reviewer: </h4>
                     <p> Cornell Jacks </p>
                     <h4> Status: <p> Online </p></h4>
-                    <a href="#chats" data-role="button" data-icon="" data-transition="pop" >Chat</a>								
+                    <a href="#chats" data-role="button" data-icon="grid" data-transition="pop" >Chat</a>								
                     </li>
                     
                     </div>
-                    <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content="b">
-                    <h2> 2.5 stars </h2>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content="b">
+                    <h2> 2 stars </h2>
                     
                     <li>
                     <h2> Review:</h2>
@@ -271,7 +332,7 @@
                     <p> Jesper Dumas</p>
                     <h4> Status: </h4>
                     <p> Offline </p>
-                    <a href="#chats" data-role="button" data-icon="" data-transition="pop">Chat</a>
+                    <a href="#chats" data-role="button" data-icon="grid" data-transition="pop">Chat</a>
                     
                     </li>
                     </div>
@@ -294,9 +355,9 @@
                     <ul>
                     <li><a href="#choose_category" data-icon="arrow-l"></a></li>
                     <li><a href="#choose_products" data-icon="back"></a></li>
-                    <li><a href="#super" data-icon="home"></a></li>
+                    <li><a href="#sherpas" data-icon="home"></a></li>
                     <li><a href="#chat" data-icon="plus"></a></li>
-                    <li><a href="choose_product.HTML" data-icon="arrow-r"></a></li>
+                    <li><a href="#choose_product" data-icon="arrow-r"></a></li>
                     </ul>
                     </div>
                     </div>
@@ -322,39 +383,47 @@
             </div>
             <div data-role="content">
                 <div>
-                    <h2> Reviewer: </h2>
-                    <p> Luckylindy </p>
-                    <form action="" id="chat1" method="post" data-transition="pop" data-direction="reverse"/>
-                    
-					<div data-role="fieldcontain">
-                        <fieldset>
-                            <label for="message"> Message: </label>
-                            <input type="text" id="comment" placeholder="This is awesome"  data-mini="true" name="comment"/>
-                            <div id='errmsg' style='color: #f00'></div>
-			 				<input type="button" id='send' value="Send"/>
-                            </div>
-                    </fieldset>
-                </div>
-			    
-                </form>
-                
-	   			
-                <div>
-                    <h2> User: </h2>
-                    <p> mikedog42 </p>
+                    <h2> Reviewer:</h2> <span> Master Chef </span> 
                     
                     <form action="" id="chat2" method="post" data-transition="pop" data-direction="reverse"/>
-                    <div data-role="fieldcontain">
-                        <fieldset>
-                            <label for="message"> Message: </label>
-                            <input type="text" id="comment2" placeholder="This is awesome"  data-mini="true" name="comment"/>
-                            <input type="button" id='send' value="Send"/>
-                        </fieldset>
-                    </div>
-                    
-                    </form>
-                    
-                </div>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-role="fieldcontain">
+                            <fieldset>
+                                <p>
+                                <label for="message"> Message:  </label>
+                                </p>
+                                <p>
+                                <input type="text" id="comment2" placeholder="This is awesome"  data-mini="true" name="comment"/>
+                                </p>
+                                <div class="ui-block-a">
+                                    <input type="submit" data-theme="b" value="send" >
+                                        </div>
+                            </fieldset>
+                        </li>			    
+                        </form>	  
+                        </div		
+                        <div>
+                        <h2> User: </h2>
+                        <p> mikedog42 </p>
+                        
+                        <form action="" id="chat2" method="post" data-transition="pop"
+                        data-direction="reverse"/>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-role="fieldcontain">
+                                <fieldset>
+                                    <p>
+                                    <label for="message"> Message:  </label>
+                                    </p>
+                                    <p>
+                                    <input type="text" id="comment2" placeholder="This is awesome"  data-mini="true" name="comment"/>
+                                    </p>
+                                    <div class="ui-block-a">
+                                        <button type="submit" data-theme="b">Send</button>
+                                    </div>
+                                </fieldset>
+                            </li>			    
+                            </form>	  
+                            </div>
                 
                 <form>
 	             	<label for="next">What's Next</label>
@@ -366,21 +435,43 @@
                     
                 </form>
                 
-                
             </div>
+        </div>		
+        
         </div>
-        </div>
+        
+        <!--page-->
+        
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="choose_category.HTML" data-icon="arrow-l"></a></li>
-                    <li><a href="products.HTML" data-icon="back"></a></li>
-                    <li><a href="sherpaio.HTML" data-icon="home"></a></li>
-                    <li><a href="#" data-icon="plus"></a></li>
+                    <li><a href="#choose_category" data-icon="arrow-l"></a></li>
+                    <li><a href="#choose_products" data-icon="back"></a></li>
+                    <li><a href="#super" data-icon="home"></a></li>
+                    <li><a href="#chat" data-icon="plus"></a></li>
                     <li><a href="choose_product.HTML" data-icon="arrow-r"></a></li>
                 </ul>
             </div>
         </div>
-        
     </body>
-</html>
+    
+</HTML>
+<script>
+	$.mobile.page.prototype.options.domCache = true;
+	$.mobile.loadPage( choose_category.html, {showLoadMsg: false});
+	$.mobile.loadPage( choose_product.html, {showLoadMsg: false});
+	$.mobile.loadPage(products.html, {showLoadMsg: false});
+	$.mobile.loadPage(chat.html, {showLoadMsg: false});
+    </script>
+<script>
+	$("#index").live("pageint", function(event) {
+                     $.getJSON("category.json", functional(category)) { 
+                     }
+                     })
+    
+    </script>
+<script>
+	$("#choose_category").bind("click", function(event) {
+                               $.mobile.changePage($("#choose_category"));
+                               })
+    </script>
