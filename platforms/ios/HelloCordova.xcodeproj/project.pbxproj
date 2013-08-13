@@ -43,6 +43,18 @@
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		3AE960E2FB6A4C4ABFB7833F /* CDVCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 364B3F5085D44F539200BD81 /* CDVCompass.m */; };
 		3DD9719E009A48519568E412 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AA0E72742444D9BB0C819 /* CDVNotification.m */; };
+		44CD434417BAEA5100EB5D79 /* tagheuer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433917BAEA5100EB5D79 /* tagheuer.jpg */; };
+		44CD434517BAEA5100EB5D79 /* wenger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433A17BAEA5100EB5D79 /* wenger.jpg */; };
+		44CD434617BAEA5100EB5D79 /* longines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433B17BAEA5100EB5D79 /* longines.jpg */; };
+		44CD434717BAEA5100EB5D79 /* uboat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433C17BAEA5100EB5D79 /* uboat.jpg */; };
+		44CD434817BAEA5100EB5D79 /* tissot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433D17BAEA5100EB5D79 /* tissot.jpg */; };
+		44CD434917BAEA5100EB5D79 /* iwc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433E17BAEA5100EB5D79 /* iwc.jpg */; };
+		44CD434A17BAEA5100EB5D79 /* cartier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD433F17BAEA5100EB5D79 /* cartier.jpg */; };
+		44CD434B17BAEA5100EB5D79 /* ebel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD434017BAEA5100EB5D79 /* ebel.jpg */; };
+		44CD434C17BAEA5100EB5D79 /* hamilton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD434117BAEA5100EB5D79 /* hamilton.jpg */; };
+		44CD434D17BAEA5100EB5D79 /* bulova.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD434217BAEA5100EB5D79 /* bulova.jpg */; };
+		44CD434E17BAEA5100EB5D79 /* corum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD434317BAEA5100EB5D79 /* corum.jpg */; };
+		44CD435317BAEC8900EB5D79 /* reviewsyio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44CD435217BAEC8900EB5D79 /* reviewsyio.jpg */; };
 		44F6B4AC17B30C210092F254 /* login-with-amazon-sdk in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F6B4AA17B30C210092F254 /* login-with-amazon-sdk */; };
 		44F6B4AD17B30C210092F254 /* login-with-amazon-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F6B4AB17B30C210092F254 /* login-with-amazon-sdk.a */; };
 		5AA0E66D1729F45B000DC89A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66C1729F45B000DC89A /* OpenAL.framework */; };
@@ -130,6 +142,18 @@
 		32CA4F630368D1EE00C91783 /* HelloCordova-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloCordova-Prefix.pch"; sourceTree = "<group>"; };
 		364B3F5085D44F539200BD81 /* CDVCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVCompass.m; path = "org.apache.cordova.core.device-orientation/CDVCompass.m"; sourceTree = "<group>"; };
 		3EB9D812ED254E00A81339E4 /* CDVContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVContacts.m; path = org.apache.cordova.core.contacts/CDVContacts.m; sourceTree = "<group>"; };
+		44CD433917BAEA5100EB5D79 /* tagheuer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tagheuer.jpg; sourceTree = "<group>"; };
+		44CD433A17BAEA5100EB5D79 /* wenger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wenger.jpg; sourceTree = "<group>"; };
+		44CD433B17BAEA5100EB5D79 /* longines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = longines.jpg; sourceTree = "<group>"; };
+		44CD433C17BAEA5100EB5D79 /* uboat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uboat.jpg; sourceTree = "<group>"; };
+		44CD433D17BAEA5100EB5D79 /* tissot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tissot.jpg; sourceTree = "<group>"; };
+		44CD433E17BAEA5100EB5D79 /* iwc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iwc.jpg; sourceTree = "<group>"; };
+		44CD433F17BAEA5100EB5D79 /* cartier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cartier.jpg; sourceTree = "<group>"; };
+		44CD434017BAEA5100EB5D79 /* ebel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ebel.jpg; sourceTree = "<group>"; };
+		44CD434117BAEA5100EB5D79 /* hamilton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamilton.jpg; sourceTree = "<group>"; };
+		44CD434217BAEA5100EB5D79 /* bulova.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bulova.jpg; sourceTree = "<group>"; };
+		44CD434317BAEA5100EB5D79 /* corum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corum.jpg; sourceTree = "<group>"; };
+		44CD435217BAEC8900EB5D79 /* reviewsyio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reviewsyio.jpg; sourceTree = "<group>"; };
 		44F6B4A817B30ACB0092F254 /* LoginWithAmazonSDKForiOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LoginWithAmazonSDKForiOS; path = ../../../../Downloads/LoginWithAmazonSDKForiOS; sourceTree = "<group>"; };
 		44F6B4AA17B30C210092F254 /* login-with-amazon-sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "login-with-amazon-sdk"; path = "../../../../Downloads/LoginWithAmazonSDKForiOS/Build-device/login-with-amazon-sdk"; sourceTree = "<group>"; };
 		44F6B4AB17B30C210092F254 /* login-with-amazon-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "login-with-amazon-sdk.a"; path = "../../../../Downloads/LoginWithAmazonSDKForiOS/Build-device/login-with-amazon-sdk.a"; sourceTree = "<group>"; };
@@ -240,6 +264,18 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				44CD433917BAEA5100EB5D79 /* tagheuer.jpg */,
+				44CD433A17BAEA5100EB5D79 /* wenger.jpg */,
+				44CD435217BAEC8900EB5D79 /* reviewsyio.jpg */,
+				44CD433B17BAEA5100EB5D79 /* longines.jpg */,
+				44CD433C17BAEA5100EB5D79 /* uboat.jpg */,
+				44CD433D17BAEA5100EB5D79 /* tissot.jpg */,
+				44CD433E17BAEA5100EB5D79 /* iwc.jpg */,
+				44CD433F17BAEA5100EB5D79 /* cartier.jpg */,
+				44CD434017BAEA5100EB5D79 /* ebel.jpg */,
+				44CD434117BAEA5100EB5D79 /* hamilton.jpg */,
+				44CD434217BAEA5100EB5D79 /* bulova.jpg */,
+				44CD434317BAEA5100EB5D79 /* corum.jpg */,
 				44F6B4AA17B30C210092F254 /* login-with-amazon-sdk */,
 				44F6B4AB17B30C210092F254 /* login-with-amazon-sdk.a */,
 				44F6B4A817B30ACB0092F254 /* LoginWithAmazonSDKForiOS */,
@@ -489,6 +525,18 @@
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				B70E40C61E364BF8B27A438F /* CDVCapture.bundle in Resources */,
 				855BE47D48BF400593F1B2B3 /* CDVNotification.bundle in Resources */,
+				44CD434417BAEA5100EB5D79 /* tagheuer.jpg in Resources */,
+				44CD434517BAEA5100EB5D79 /* wenger.jpg in Resources */,
+				44CD434617BAEA5100EB5D79 /* longines.jpg in Resources */,
+				44CD434717BAEA5100EB5D79 /* uboat.jpg in Resources */,
+				44CD434817BAEA5100EB5D79 /* tissot.jpg in Resources */,
+				44CD434917BAEA5100EB5D79 /* iwc.jpg in Resources */,
+				44CD434A17BAEA5100EB5D79 /* cartier.jpg in Resources */,
+				44CD434B17BAEA5100EB5D79 /* ebel.jpg in Resources */,
+				44CD434C17BAEA5100EB5D79 /* hamilton.jpg in Resources */,
+				44CD434D17BAEA5100EB5D79 /* bulova.jpg in Resources */,
+				44CD434E17BAEA5100EB5D79 /* corum.jpg in Resources */,
+				44CD435317BAEC8900EB5D79 /* reviewsyio.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

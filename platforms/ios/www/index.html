@@ -26,14 +26,13 @@
             
             
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-                <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
-                <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-                <script type="text/javascript">
+                <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+                <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+                <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>                <script type="text/javascript">
                     $(document).bind('mobileinit', function() {
                                      $.mobile.page.prototype.options.addBackBtn = true;
                                      });
                     </script>
-                <script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
                 <script type="text/javascript" src="scripts/chat.js"></script>
                 <script type="text/javascript" src="scripts/model.js"></script>
                 <script type="text/javascript" src="scripts/ui.js"></script>
@@ -45,10 +44,13 @@
     <body>
         <div id="base" data-role="page">
             <div data-role="header">
-                <h1> Reviewsy.io</h1>
-                <a href=""></a>
+                 
+               <h1> Reviewsy.io</h1>
             </div>
             <div data-role="content" data-theme="c">
+                <div id="branding">
+                    <h1> Reviewsy.io <a href="/Users/fespeez/Applications/reviewsyio/platforms/ios/reviewsyio.jpg"/></a></h1>
+                    </div>
                 <div id="login">
                     <form action="result.js" id="login" method="post" data-transition="pop" data-direction="reverse"/>
                     <label for="username">username</label>
@@ -213,18 +215,18 @@
                 <div class="product_list">
                     <h1>Please choose a model</h1>
                     <ul data-role="listview" data-inset="true" data-filter="true">
-                        <li><a href="#product" data-transition="slidedown"> <img src="/img/bulova.jpg"/><h2>Bulova</h2>  <p> 4 stars</p></a>
+                        <li><a href="#product" data-transition="slidedown"> <img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/bulova.jpg"/><h2>Bulova</h2>  <p> 4 stars</p></a>
                         </li>
-                        <li><a href="#product" data-transition="slide">  <img src="/jquerytuts/img/cartier.jpg"/> Cartier Diamond Womens <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/corum.jpg"/> <h2>Corum Navigator</h2> <p5 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/ebel.jpg"/> Ebel Womens <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/iwc.jpg"/> IWC <p> 5 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/longines.jpg"/> Longines Womens Automatic <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/tagheuer.jpg"/>Tag Heuer Automatic Chronograph <p> 5 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/tissot.jpg"/> Tissot T-Touch <p> 4 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"><img src="/jquerytuts/img/wenger.jpg"/> Wenger Chronograph <p> 3 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/uboat.jpg"/>U-Boat <p> 2 stars</p></a></li>
-                        <li><a href="#product" data-transition="slide"> <img src="/jquerytuts/img/hamilton.jpg"/> Hamilton Aviator<p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide">  <img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/cartier.jpg"/> Cartier Diamond Womens <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/corum.jpg"/> <h2>Corum Navigator</h2> <p5 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/ebel.jpg"/> Ebel Womens <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/iwc.jpg"/> IWC <p> 5 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/longines.jpg"/> Longines Womens Automatic <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/tagheuer.jpg"/>Tag Heuer Automatic Chronograph <p> 5 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/tissot.jpg"/> Tissot T-Touch <p> 4 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"><img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/wenger.jpg"/> Wenger Chronograph <p> 3 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/uboat.jpg"/>U-Boat <p> 2 stars</p></a></li>
+                        <li><a href="#product" data-transition="slide"> <img src="/Users/fespeez/Applications/reviewsyio/platforms/ios/hamilton.jpg"/> Hamilton Aviator<p> 4 stars</p></a></li>
                 </div>
             </div><!-- /page -->
             <div data-role="footer" data-position="fixed">
@@ -258,7 +260,7 @@
                     <li> Bezel: Sapphire Scratch proof </li>
                     <li> Features: Automatic </li>
                     <li>
-                    <a href=""><img src="../img/corum.jpg" ></a>
+                    <a href="/Users/fespeez/Applications/reviewsyio/platforms/ios/corum.jpg">Corum Men's</a>
                     </li>
                     
                     </ul>
